@@ -76,3 +76,31 @@
 - Dictionary properties (duplicate keys overwrite)
 
 ---
+
+# Day 3: Error and file handling, Numpy
+
+## Topics Covered
+
+### 1. **Error Handling**
+- `try` and `except` blocks
+- Multiple exception types
+- `else` clause (executes when no errors)
+- `finally` clause (always executes)
+- Raising custom exceptions with `raise`
+
+### 2. **File Handling**
+- Opening files with `open()`
+- Reading files (`read()`, `readline()`)
+- Writing to files (`write()`, `append()`)
+- Using `with` statement (auto-closes files)
+- Creating new files
+- Deleting files with `os.remove()`
+- Checking file existence with `os.path.exists()`
+
+### 3. **NumPy Introduction**
+- Creating arrays with `np.array()`
+- 1D, 2D, and 3D arrays
+- Checking array dimensions with `.ndim`
+- Creating higher-dimensional arrays
+  
+---
