@@ -104,3 +104,32 @@
 - Creating higher-dimensional arrays
   
 ---
+
+## Day 4: Pandas Basics & NumPy Essentials
+
+### Topics Covered
+
+#### Pandas DataFrames
+* **Creating DataFrames:** Building structured data from dictionaries using `pd.DataFrame()`.
+* **Shape Exploration:** Using `.shape` to retrieve dimensions.
+    * `df.shape[0]` for the number of **rows**.
+    * `df.shape[1]` for the number of **columns**.
+
+#### NumPy Data Types & Casting
+* **Checking Types:** Using `.dtype` to inspect array data (e.g., `int64`, `S1`, `<U6`).
+* **Manual Definition:** Defining types during creation using the `dtype` argument.
+* **Type Conversion:** Using `.astype()` to cast existing arrays into new formats (e.g., converting `float` to `int`).
+* **Error Handling:** Understanding why passing a string into an integer-defined array (`dtype='i'`) triggers a `ValueError`.
+
+#### Array Ownership: Copy vs. View
+* **Copy:** Creates a completely new array. Changes to the copy **do not** affect the original.
+* **View:** Creates a reference to the original. Changes to the view **will** change the original data.
+* **The `.base` Attribute:** A tool to check if an array owns its data (returns `None` for copies/originals, returns the original array for views).
+
+#### Array Shape & Reshaping
+* **Dimensional Control:** Using `ndmin` to force a minimum number of dimensions.
+* **Reshaping:** Transforming data between 1D, 2D, and 3D using `.reshape()`.
+* **Unknown Dimension:** Using `-1` in a reshape command to let NumPy automatically calculate the correct size for that dimension.
+* **Flattening:** Converting any multi-dimensional array into a simple 1D array using `.reshape(-1)`.
+
+---
