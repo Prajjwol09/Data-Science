@@ -110,26 +110,59 @@
 ### Topics Covered
 
 #### Pandas DataFrames
-* **Creating DataFrames:** Building structured data from dictionaries using `pd.DataFrame()`.
-* **Shape Exploration:** Using `.shape` to retrieve dimensions.
-    * `df.shape[0]` for the number of **rows**.
-    * `df.shape[1]` for the number of **columns**.
+* Creating DataFrames with `pd.DataFrame()`
+* Row and Column counts using `df.shape[0]` and `df.shape[1]`
 
-#### NumPy Data Types & Casting
-* **Checking Types:** Using `.dtype` to inspect array data (e.g., `int64`, `S1`, `<U6`).
-* **Manual Definition:** Defining types during creation using the `dtype` argument.
-* **Type Conversion:** Using `.astype()` to cast existing arrays into new formats (e.g., converting `float` to `int`).
-* **Error Handling:** Understanding why passing a string into an integer-defined array (`dtype='i'`) triggers a `ValueError`.
+#### NumPy Data Types
+* Checking data types with `.dtype`
+* Defining `dtype` during array creation (e.g., `dtype='S'`)
+* Type conversion using `.astype()`
+* Data type errors and limitations
 
 #### Array Ownership: Copy vs. View
-* **Copy:** Creates a completely new array. Changes to the copy **do not** affect the original.
-* **View:** Creates a reference to the original. Changes to the view **will** change the original data.
-* **The `.base` Attribute:** A tool to check if an array owns its data (returns `None` for copies/originals, returns the original array for views).
+* Creating copies with `.copy()`
+* Creating views with `.view()`
+* Checking data ownership with the `.base` attribute
 
 #### Array Shape & Reshaping
-* **Dimensional Control:** Using `ndmin` to force a minimum number of dimensions.
-* **Reshaping:** Transforming data between 1D, 2D, and 3D using `.reshape()`.
-* **Unknown Dimension:** Using `-1` in a reshape command to let NumPy automatically calculate the correct size for that dimension.
-* **Flattening:** Converting any multi-dimensional array into a simple 1D array using `.reshape(-1)`.
+* Defining dimensions with `ndmin`
+* Reshaping arrays (1D to 2D and 3D)
+* Using unknown dimensions with `-1`
+* Flattening multi-dimensional arrays to 1D
+
+---
+
+## Day 5: NumPy Universal Functions (ufuncs)
+
+### Topics Covered
+
+#### Vectorization & Custom ufuncs
+* Vectorized operations using `np.add()`
+* Creating custom universal functions with `np.frompyfunc()`
+* Validating function types using `type()`
+
+#### Simple Arithmetic
+* Basic operations: `np.add()`, `np.subtract()`, `np.multiply()`, `np.divide()`
+* Power and Remainder: `np.power()`, `np.mod()`
+* Absolute values: `np.absolute()`
+
+#### Summations & Products
+* Total sum of arrays with `np.sum()`
+* Summation over specific axes (`axis=1`)
+* Cumulative sums using `np.cumsum()`
+* Array products using `np.prod()`
+* Cumulative products using `np.cumprod()`
+
+#### Trigonometric & Hyperbolic Functions
+* Standard trig functions: `np.sin()` and `np.arcsin()`
+* Angle conversion: `np.deg2rad()` and `np.rad2deg()`
+* Pythagoras Theorem: Calculating hypotenuse with `np.hypot()`
+* Hyperbolic functions: `np.sinh()` and `np.arcsinh()`
+
+#### Rounding Decimals
+* `np.trunc()` and `np.fix()`: Removing decimals toward zero
+* `np.around()`: Rounding to a specific number of decimal places
+* `np.floor()`: Rounding down to the nearest integer
+* `np.ceil()`: Rounding up to the nearest integer
 
 ---
