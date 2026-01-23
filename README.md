@@ -166,3 +166,19 @@
 * `np.ceil()`: Rounding up to the nearest integer
 
 ---
+
+## Day 6: Data Cleaning & Time Series Handling
+
+### Topics Covered
+
+#### Data Cleaning & Imputation
+* Calculating the Mode with `.mode()[0]`
+* Filling missing values using `.fillna()`
+* Using `inplace=True` for direct DataFrame modification
+* Verifying data with `.info()`
+
+#### Date & Time Manipulation
+* Converting strings to datetime using `pd.to_datetime()`
+* Handling varied date formats with `format='mixed'`
+
+---
