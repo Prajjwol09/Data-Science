@@ -167,15 +167,44 @@
 
 ---
 
-## Day 6: Data Cleaning & Time Series Handling
+## Day 6: Pandas Data Manipulation & Visualization
 
 ### Topics Covered
 
-#### Data Cleaning & Imputation
-* Calculating the Mode with `.mode()[0]`
-* Filling missing values using `.fillna()`
-* Using `inplace=True` for direct DataFrame modification
-* Verifying data with `.info()`
+#### Data Structures: DataFrames & Series
+* Creating DataFrames from dictionaries with custom indices
+* Creating Series with labeled indices and names
+* Filtering Series using specific index lists
+
+#### Data Loading & Inspection
+* Reading CSV files with `pd.read_csv()` and `index_col`
+* Inspecting datasets with `.shape`, `.head()`, and `.tail()`
+* Using `.to_string()` to print entire DataFrames
+* Converting JSON-structured dictionaries into DataFrames
+* Getting structural summaries with `.info()`
+
+#### Data Selection & Indexing
+* Accessing specific rows by label using `.loc[]`
+* Selecting multiple rows using list-based indexing
+* Accessing and iterating through the `df.index`
+
+#### Data Cleaning: Handling Missing Values
+* Removing null values with `.dropna()` (New vs. Inplace)
+* Global replacement of nulls with `.fillna()`
+* Column-specific imputation using dictionaries
+* Statistical imputation: Filling nulls with `.mean()`, `.median()`, or `.mode()[0]`
+
+#### Data Cleaning: Fixing Values & Duplicates
+* Replacing specific cell values using `.loc[index, column]`
+* Conditional removal of rows based on value thresholds
+* Identifying duplicates with `.duplicated()`
+* Removing redundant data with `.drop_duplicates(inplace=True)`
+
+#### Data Analysis & Visualization
+* Calculating relationships with `.corr()` (Correlation Matrix)
+* Creating Scatter Plots with `.plot(kind='scatter')`
+* Understanding data frequency with Histograms using `.plot(kind='hist')`
+* Visualizing plots using `matplotlib.pyplot.show()`
 
 #### Date & Time Manipulation
 * Converting strings to datetime using `pd.to_datetime()`
