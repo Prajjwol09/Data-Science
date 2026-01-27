@@ -211,3 +211,127 @@
 * Handling varied date formats with `format='mixed'`
 
 ---
+
+# Movie Dataset Data Cleaning & Preprocessing (Python)
+
+## Overview
+This project focuses on **systematic data cleaning and preprocessing** of a movie dataset using **Python, Pandas, and NumPy**.  
+The objective is to transform messy, inconsistent, and partially missing raw data into **clean, analysis-ready features**, while preserving the original columns for reference.
+
+The notebook demonstrates **real-world data cleaning workflows**, including string normalization, missing value handling, datatype conversion, and feature engineering.
+
+---
+
+## Tech Stack
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib & Seaborn (imported for future visualization and analysis)
+
+---
+
+## Dataset
+- File: `movies.csv`
+- Format: CSV
+- Contains attributes such as:
+  - Year
+  - Genre
+  - Rating
+  - Votes
+  - Runtime
+  - Gross Revenue
+  - One-line Description
+  - Director & Stars
+
+---
+
+## Initial Data Exploration
+The dataset is explored using:
+- `head()` and `tail()` to inspect records
+- `info()` to understand data types and missing values
+- `shape` and `len()` to evaluate dataset size
+
+This ensures all cleaning steps are **data-driven and justified**.
+
+---
+
+## Data Cleaning Process
+
+### Year Column
+- Removed:
+  - Parentheses `()`
+  - En dashes `–`
+  - Extra spaces and standalone symbols
+- Handled blank and missing values
+- Created a new column: **`Year_Cleaned`**
+- Missing values filled with `"Unknown"`
+- Original column preserved for traceability
+
+---
+
+### Genre Column
+- Removed newline characters and extra spaces
+- Standardized empty values
+- Created **`Genre_Cleaned`**
+- Missing values replaced with `"Unknown"`
+
+---
+
+### Rating Column
+- Analyzed distribution and range
+- Created **`Rating_Cleaned`**
+- Converted invalid or empty entries to `NaN` for numerical consistency
+
+---
+
+### Votes Column
+- Removed thousands separators (commas)
+- Converted data from string to numeric
+- Invalid values coerced to `NaN`
+- Output stored in **`Votes_Cleaned`**
+
+---
+
+### Runtime Column
+- Performed statistical inspection
+- Identified potential inconsistencies for downstream analysis
+
+---
+
+### Gross Revenue Column
+- Removed currency symbols (`$`) and magnitude indicators (`M`)
+- Converted values to numeric format
+- Scaled values to **actual dollar amounts**
+- Stored in **`Gross_Cleaned`**
+
+---
+
+### One-Line Description Column
+- Removed newline characters
+- Trimmed unnecessary whitespace
+- Replaced empty strings with `NaN`
+- Stored in **`OneLine_Cleaned`**
+
+---
+
+### Director & Stars Column
+- Removed labels:
+  - `Director:`
+  - `Stars:`
+  - `Star:`
+- Removed pipe (`|`) separators and newline characters
+- Normalized spacing
+- Replaced empty values with `NaN`
+- Stored in **`Stars_Cleaned`**
+
+---
+
+## Key Concepts Demonstrated
+- String cleaning using regex
+- Handling missing and malformed data
+- Safe datatype conversion
+- Feature engineering with cleaned columns
+- Preserving raw data alongside processed data
+
+---
+
