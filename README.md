@@ -335,3 +335,42 @@ This ensures all cleaning steps are **data-driven and justified**.
 
 ---
 
+# Day 8: Pandas Data Grouping & Aggregation
+
+## Topics Covered
+
+### Core Grouping Mechanics
+* **Single & Multi-level Grouping**: Using `.groupby()` on one or more columns (Category, Region, Product).
+* **Selection within Groups**: Accessing specific columns after grouping, e.g., `df.groupby('A')[['C', 'D']]`.
+* **Aggregation Functions**: Applying `.sum()`, `.mean()`, `.count()`, `.min()`, and `.max()` to grouped data.
+
+### Advanced Aggregation Techniques
+* **The `.agg()` Method**: Applying different statistical functions to different columns in a single step.
+* **Named Aggregation**: Renaming output columns during aggregation for cleaner reporting (e.g., `Total_Sales = ('Sales', 'sum')`).
+* **Group Filtering**: Using `.filter()` with lambda functions to subset data based on group-level conditions (e.g., sum of sales > 10,000).
+* **Transformation**: Using `.transform()` to append group-level statistics (like mean sales) back to the original DataFrame while maintaining the original shape.
+
+
+
+### Time-Series Grouping
+* **Datetime Accessors**: Utilizing `.dt.to_period('M')`, `.dt.year`, and `.dt.day_name()` to group data by time intervals.
+* **Resampling**: Using `.resample()` on a DatetimeIndex to aggregate data into weekly ('W') or monthly ('ME') buckets.
+* **Growth Metrics**: Calculating Month-over-Month (MoM) growth rates using `.pct_change()`.
+
+### Data Inspection & Summarization
+* **Dataset Overview**: Using `.head()`, `.shape`, and `.columns.tolist()` for initial data exploration.
+* **Top Performers**: Using `.nlargest()` to identify top categories and `.idxmax()` to find the specific labels of highest-performing products.
+
+---
+
+## Practical Exercises Completed
+
+* **Exercise 1**: Total sales breakdown by Category and Region.
+* **Exercise 2**: Average profit per product calculation (rounded to 2 decimal places).
+* **Exercise 3**: Identifying the category with the highest total sales.
+* **Exercise 4**: Monthly sales and quantity aggregation using time-based grouping.
+* **Exercise 5**: Creation of a comprehensive KPI Dashboard by Region (Revenue, Avg Transaction, Profit).
+* **Exercise 6**: Finding the specific top-selling product within each category using `idxmax`.
+* **Exercise 7**: Monthly sales growth rate calculation using resampling and percentage change.
+
+---
