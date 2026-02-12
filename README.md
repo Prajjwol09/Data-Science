@@ -374,3 +374,32 @@ This ensures all cleaning steps are **data-driven and justified**.
 * **Exercise 7**: Monthly sales growth rate calculation using resampling and percentage change.
 
 ---
+
+# Day 9: Data Merging and Integration with Pandas
+
+## Topics Covered
+
+### **Concatenating DataFrames**
+- **Row-wise Stacking:** Combining multiple DataFrames vertically using `pd.concat()`.
+- **Column-wise Stacking:** Using `axis=1` to merge DataFrames horizontally.
+- **Memory Efficiency:** Learning why it's better to collect objects in a list before concatenating rather than using a loop.
+- **Index Management:** - Using `ignore_index=True` to create a fresh 0-to-n index.
+    - Using `.reindex()` to align data based on a specific DataFrame’s index.
+
+
+### **Merging Datasets (SQL-style)**
+- **Inner Join:** Returns records with matching values in both tables (`how='inner'`).
+- **Left Join:** Keeps all records from the left table and adds matching records from the right (`how='left'`).
+- **Right Join:** Keeps all records from the right table and adds matching records from the left (`how='right'`)
+
+
+### **Data Aggregation**
+- **Grouping:** Using `.groupby()` to consolidate data based on categories.
+- **Aggregation:** Using `.sum()` to calculate totals per group.
+- **Index Resetting:** Using `.reset_index()` to turn grouped keys back into standard columns.
+
+### **Handling Missing Data**
+- **Identification:** Using `.isna()` to filter and view rows with missing values (NaN).
+- **Filling Nulls:** Using `.fillna()` to replace missing values with a default (e.g., replacing `NaN` with `0` for financial calculations).
+
+---
