@@ -403,3 +403,36 @@ This ensures all cleaning steps are **data-driven and justified**.
 - **Filling Nulls:** Using `.fillna()` to replace missing values with a default (e.g., replacing `NaN` with `0` for financial calculations).
 
 ---
+
+# Day 10: Time Series Analysis with Pandas
+
+## Topics Covered
+
+### **Datetime Conversion**
+- **The `pd.to_datetime()` Function:** Converting "Object" (string) columns into true Datetime objects for time-based calculations.
+- **Handling Diverse Formats:** Processing different date strings like `2023-01-15`, `01/15/2023`, and `15-Jan-2023` seamlessly.
+- **Data Reproducibility:** Using `np.random.seed()` to ensure generated "dummy" data remains consistent across runs.
+
+### **The `.dt` Accessor**
+- **Component Extraction:** Pulling specific parts of a date into new columns for easier analysis:
+    - `.dt.year`, `.dt.month`, `.dt.day`
+    - `.dt.quarter` (Q1, Q2, etc.)
+    - `.dt.dayofweek` (Monday = 0, Sunday = 6)
+    - `.dt.isocalendar().week` for ISO week numbers.
+
+
+
+### **Time-Based Filtering**
+- **Logical Indexing:** Filtering datasets for specific years, months, or quarters.
+- **Date Range Slicing:** Selecting data between two specific timestamps using comparison operators (`>=` and `<=`).
+
+### **Advanced Time Series Aggregation**
+- **Grouping by Time:** Combining `.groupby()` with extracted date components (e.g., finding the best-selling category per month).
+- **Index Identification:** Using `.idxmax()` to find the specific index of the highest value within grouped data.
+
+### **Rolling Windows & Visualization**
+- **Rolling Averages:** Using `.rolling(window=7)` to calculate a moving average, which helps smooth out "noisy" daily data to see trends.
+- **Matplotlib Integration:** - Plotting raw data vs. smoothed trends.
+    - Customizing charts with `alpha` transparency, `labels`, `colors`, and `grids`.
+  
+---
