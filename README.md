@@ -436,3 +436,33 @@ This ensures all cleaning steps are **data-driven and justified**.
     - Customizing charts with `alpha` transparency, `labels`, `colors`, and `grids`.
   
 ---
+
+# Day 11: Descriptive Statistics and Data Distributions
+
+## Topics Covered
+
+### **Common Data Distributions**
+- **Normal Distribution (Bell Curve):** Generating data centered around a mean (`loc`) with a specific spread (`scale`) using `np.random.normal()`.
+- **Right-Skewed Distribution:** Understanding data where the "tail" stretches toward the right (higher values), often modeled using `np.random.exponential()`.
+- **Left-Skewed Distribution:** Understanding data where the "tail" stretches toward the left (lower values).
+
+### **Descriptive Statistics**
+- **Central Tendency:** Calculating **Mean** (average) and **Median** (middle value) to find the center of the data.
+- **Spread & Variation:** - **Variance:** Measuring how far data points are spread from the mean.
+    - **Standard Deviation (S.D.):** The square root of variance, indicating average distance from the mean.
+- **Percentiles & Quartiles:** - **Q1 (25th Percentile):** The value below which 25% of the data falls.
+    - **Q3 (75th Percentile):** The value below which 75% of the data falls.
+
+### **Outlier Detection & Removal**
+- **Interquartile Range (IQR):** Calculated as $IQR = Q3 - Q1$. This represents the spread of the middle 50% of the data.
+- **Tukey’s Fences:** Defining "normal" boundaries using:
+    - **Lower Bound:** $Q1 - 1.5 \times IQR$
+    - **Upper Bound:** $Q3 + 1.5 \times IQR$
+- **Data Cleaning:** Filtering out "extreme" values (outliers) that fall outside these bounds to prevent them from skewing the analysis.
+
+### **Data Visualization with Matplotlib**
+- **Histograms:** Using `plt.hist()` to visualize the frequency and shape of distributions.
+- **Subplots:** Organizing multiple charts in a single row/column using `plt.subplot(rows, cols, position)`.
+- **Styling:** Customizing plots with `bins`, `alpha` (transparency), `colors`, and `legends`.
+
+---
